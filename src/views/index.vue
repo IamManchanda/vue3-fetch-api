@@ -1,14 +1,26 @@
 <template>
   <div>
-    <fetch-data />
+    <button @click="id++">Change ID</button>
+    <post :id="id" />
   </div>
 </template>
 
 <script>
-import FetchData from "@/components/fetch-data";
+import { reactive, toRefs } from "vue";
+import Post from "../components/post.vue";
+
 export default {
   components: {
-    FetchData,
+    Post,
+  },
+  setup() {
+    const state = reactive({
+      id: 1,
+    });
+
+    return {
+      ...toRefs(state),
+    };
   },
 };
 </script>
