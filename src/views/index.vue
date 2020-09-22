@@ -1,6 +1,9 @@
 <template>
   <div>
-    <button @click="id++">Change ID</button>
+    <p>
+      <button @click="id++">Change ID</button>
+    </p>
+    <hr />
     <post :id="id" />
   </div>
 </template>
