@@ -7,6 +7,8 @@
 <script>
 import FetchData from "@/components/fetch-data";
 export default {
-  components: { FetchData },
+  components: {
+    FetchData,
+  },
 };
 </script>
